@@ -1,0 +1,27 @@
+
+/* OUTRAS IMPORTAÇÕES */
+@import url('diversos.css');
+@import url('principal.css');
+
+
+/* IMPORTACÕES DOS CONTEÚDOS */
+
+@import url('conteudos/sobre.css');
+@import url('conteudos/produtos.css');
+@import url('conteudos/contato.css');
+
+
+/* IMPORTAÇÕES DO MENU PRINCIPAL */
+
+@import url('menu_principal/lojas.css');
+@import url('menu_principal/melhoramigo.css');
+@import url('menu_principal/menu_principal.css');
+
+
+/* CORES USADAS PARA A ESTRUTURA DO SITE */
+
+/* #B36324 ( MARROM CLARO ) */
+/* #24502D ( VERDE ESCURO ) */
+/* #4CB944 ( VERDE CLARO ) */
+/* #FFFFFF ( BRANCO ) */
+/* #FEFAE0 ( BEIGE CLARO ) */

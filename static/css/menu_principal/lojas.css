@@ -1,0 +1,11 @@
+/* ESTILIZAÇÃO DO CONTEUDO AO SELECIONAR A OPÇÃO LOJAS */
+
+.conteudo-menu-principal .lojas-produtos ul{
+    flex-direction: row;
+}
+
+/* DISTÂNCIA ENRE OS ELEMENTOS */
+
+.conteudo-menu-principal .lojas-produtos a{
+    margin-inline: 30px;
+}

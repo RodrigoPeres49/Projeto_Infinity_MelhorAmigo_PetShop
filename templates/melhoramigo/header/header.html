@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TÍTULO DA PÁGINA -->
+
+    <title>Melhor Amigo Pet Shop</title>
+
+    <!-- LINKS PARA OS ARQUIVOS CSS -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+
+    <!-- LINKS PARA ARQUIVO JS -->
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+</head>
+
+<!-- INICIO DO CONTEUDO DA PÁGINA -->
+
+<body class="melhoramigo">
+    <!-- IMPORTAÇÃO DAS PÁGINAS NA PÁGINA PRINCIPAL -->
+
+    {% include 'melhoramigo/header/menu/menu_principal.html' %}
+
+    <!-- CONTEUDO A SER EXIBIDO AO CLICAR NAS OPÇÕES DO MENU PRINCIPAL -->
+    <div class="conteudo-menu-principal">
+
+        <div class="conteudo" data-content="lojas">{%include 'melhoramigo/header/menu/conteudo_lojas.html'%}</div>
+        <div class="conteudo" data-content="melhoramigo">{%include 'melhoramigo/header/menu/conteudo_melhoramigo.html'%}</div>
+        <div class="conteudo" data-content="produtos">{%include 'melhoramigo/header/menu/conteudo_produtos.html'%}</div>
+
+    </div>
+
+</body>
+</html>

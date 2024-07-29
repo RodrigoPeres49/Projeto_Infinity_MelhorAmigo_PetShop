@@ -1,0 +1,159 @@
+
+
+/* IMPORTAÇÃO DA ESTILIZAÇÃO DOS DEMAIS CONTEÚDOS  */
+
+@import url('lojas.css');
+@import url('melhoramigo.css');
+
+
+/* MENU PRINCIPAL */
+
+.menu-principal{
+
+    /* BASE DO MENU PRINCIPAL */
+
+    background-color: #24502D;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+
+}
+
+
+/* ESTILIZAÇÃO E POSICIONAMENTO DA LISTA EM SÍ NO MENU PRINCIPAL */
+
+.menu-principal ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-right: 30px ;
+}
+
+/* ESTILIZAÇÃO DAS OPÇÕES DO MENU PRINCIPAL */
+
+.menu-principal ul li{
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* OCULTAR INPUT RADIO */
+
+.menu-principal input[type="radio"]{
+    display: none;
+}
+
+/* AO CLICAR NO LABEL ELE SELECIONA O INPUT ASSOCIADO A ELE */
+
+.menu-principal input[type="radio"] + label{
+
+    /* ESTILIZAÇÃO DO LABEL */
+    
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    width: fit-content;
+    height: 20px;
+    cursor: pointer;
+    background-color: #4CB944;
+    color: white;
+}
+
+/* MUDANÇA DE COR AO CLICAR NAS OPÇÕES (LABEL ASSOCIADO AO INPUT) */
+
+.menu-principal li input[type="radio"]:checked + label{
+    background-color: #B36324;
+    color: black;
+}
+
+/* MUDANÇA DE COR AO PASSAR O MOUSE SOBRE O CAMPO SELECIONADO */
+
+.menu-principal ul li label:hover{
+    background-color: #B36324;
+    color: black;
+    transition: 0.5s;
+}
+
+
+/* ANIMAÇÃO PARA MOSTRAR O CONTEÚDO */
+
+@-webkit-keyframes mostrar-conteudo {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes mostrar-conteudo {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+/* CLASSE " conteudo " SERÁ INVISÍVEL */
+
+.conteudo {
+    display: none;
+}
+
+/* UTILIZAREMOS UMA FUNÇÃO JAVASCRIPT PARA ADICIONAR A CLASSE " ativo " A CLASSE " conteudo " E VIZUALIZAR O CONTEUDO DESEJADO */
+
+.conteudo.ativo{
+    display: block;
+    -webkit-animation: mostrar-conteudo 1s;
+    animation: mostrar-conteudo 1s;
+}
+
+/* CONTEUDOS DOS MENU PRINCIPAL */
+
+.conteudo-menu-principal{
+
+    background-color: #4CB944;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+}
+
+/* VOU USAR UM PADRÃO DE ESTILIZAÇÃO PARA O CONTEUDO MOSTRADO  */
+
+.conteudo-menu-principal ul{
+    list-style-type: none;
+    display: flex;
+}
+
+/* ESTILIZAÇÃO DO LINK */
+
+.conteudo-menu-principal a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ADAPTAÇÃO PARA SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+
+    .conteudo-menu-principal li{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+/* MUDANÇA DE COR AO PASSAR O MOUSE SOBRE O LINK */
+
+.conteudo-menu-principal a:hover{
+    color:#B36324;
+}

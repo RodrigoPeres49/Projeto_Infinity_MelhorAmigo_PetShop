@@ -1,0 +1,120 @@
+/* ESTILIZAÇÃO DO CONTEÚDO CONTATO */
+
+/* CADA LISTA DO CAMPO DE CONTATO TERÁ UM " flex-direction " NO VALOR DE " row " PARA SER ORDEANO EM LINHA */
+
+.contato{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* AS DEMAIS LISTAS ORDENADAS EM LINHA SERÃO ORDENADAS EM COLUNAS " flex-direction: collumn " */
+
+.contato ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    margin-inline: 30px;
+}
+
+/* ADAPTAÇÃO PARA SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    .contato img{
+        display: none;
+    }
+    .contato p{
+        font-weight: bold;
+    }
+    .contato ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .contato li{
+        font-size: 8px;
+    }
+}
+
+/* COR DE CADA LINK  */
+
+.contato a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* CENTRALIZAÇÃO DE CADA TÍTULO DA LISTA SERÁ FEITO NA TAG " p " */
+
+.contato p{
+    text-align: center;
+}
+
+/* TAMANHO E ESPAÇAMENTO DOS ICONES DE CADA CAMPO NA LISTA */
+
+.contato img{
+    width: 12px;
+    height: 12px;
+    padding-inline: 10px;
+}
+
+/* FORMULARIO PARA ENVIAR MENSAGEM */
+
+.form-contato{
+    display: flex;
+    padding-bottom: 50px;
+}
+.form-contato form{
+    display: flex;
+    flex-direction: column;
+}
+.form-contato input{
+    border-radius: 20px;
+    width: 250px;
+}
+.form-contato input[type="file"]{
+    border-radius: 0;
+    width: 300px;
+}
+.form-contato textarea{
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* ADAPTAÇÃO PARA SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    .form-contato textarea{
+        width: 200px;
+        height: 100px;
+    }
+}
+    
+/* BOTÕES DO FORMULÁRIO DE CONTATO */
+
+.buttons {
+    padding-block: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    background-color: #4CB944;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.buttons button:hover{
+    background-color: #B36324;
+    color: black;
+    transition: 0.5s;
+}

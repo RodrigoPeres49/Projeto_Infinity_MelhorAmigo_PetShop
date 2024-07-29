@@ -1,0 +1,43 @@
+.sobre{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 30%;
+    align-items: center;
+}
+
+/* TELA DE FUNDO DO COMPONENTE */
+
+.sobre .telafundo{
+    background-image: url(https://i.postimg.cc/4dPH2jZP/melhor.jpg);
+}
+
+/* TEXTO ALINHADO AO CENTRO */
+
+.sobre p, h1, h3{
+    text-align: center;
+}
+
+/* PADRÃO DE IMAGENS DO COMPONENTE */
+
+.sobre img{
+    width: 650px;
+    height: 500px;
+    border-radius: 20px;
+
+}
+
+.sobre .icone{
+    width: 20px;
+    height: 20px;
+    padding-inline: 10px;
+}
+
+/* ADAPTAÇÃO PARA SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    .sobre img{
+        width: 300px;
+        height: 300px;
+    }
+}

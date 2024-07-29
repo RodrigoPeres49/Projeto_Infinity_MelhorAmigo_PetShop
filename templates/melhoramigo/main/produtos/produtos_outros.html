@@ -1,0 +1,106 @@
+{% extends 'melhoramigo/index.html' %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<div class="produtos">
+    <header>
+        <h1><img class="icone" src="https://i.postimg.cc/zvXNpcXn/pata.png" alt="outros"> Produtos para Outros Animais</h1>
+    </header>
+    <main>
+
+        <section>
+            <h2>Produtos para Aves</h2>
+            <p>Oferecemos uma ampla gama de produtos para aves, incluindo rações, brinquedos e acessórios. Nossas marcas incluem:</p>
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/BQ0QPm0Q/racao-calopsita.png" alt="Ração Calopsita">
+                        <p>Ração para Calopsita</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/SKJyb5WV/sementes-periquito.png" alt="Semente para Periquitos">
+                        <p>Sementes para Periquitos</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/tRP4gL8M/poleiros.png" alt="Poleiros Naturais">
+                        <p>Poleiros Naturais</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/mgdbqRFt/brinquedos-aves.png" alt="Brinquedos">
+                        <p>Brinquedos para Aves</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/yYy6m01h/banheira-aves.png" alt="Banheiras Para Aves">
+                        <p>Banheiras</p>
+                    </div>
+                </div>
+                <button class="slider-button prev">&lt;</button>
+                <button class="slider-button next">&gt;</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Produtos para Roedores</h2>
+            <p>Para os roedores, oferecemos rações específicas, brinquedos e gaiolas. Marcas populares incluem:</p>
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/hvgWv37k/racao-hamster.png" alt="Ração Hamster">
+                        <p>Ração para Hamster</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/CL7YBY7m/rodas-exercicio.png" alt="Rodas de Exercício">
+                        <p>Rodas de Exercício</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/GmSCKQZD/labirintos.png" alt="Labirintos">
+                        <p>Tuneis e Labirintos</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/qB8pr23f/banho-seco.png" alt="Banho Seco">
+                        <p>Produtos de Banho Seco</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/C5NyqHGz/vitamina-roedores.png" alt="Vitaminas">
+                        <p>Vitaminas e Suplementos</p>
+                    </div>
+                </div>
+                <button class="slider-button prev">&lt;</button>
+                <button class="slider-button next">&gt;</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Produtos para Peixes</h2>
+            <p>Temos uma grande variedade de produtos para peixes, incluindo rações, filtros, aquários e medicamentos. Confira algumas marcas:</p>
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/xTnn1qvX/racao-peixes.png" alt="Ração Peixes">
+                        <p>Ração para Peixes</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/ZRN4Cdsd/filtro-aquario.png" alt="Filtro Aquário">
+                        <p>Filtros para Aquários</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/brj8bw4F/limpravidros-magnetico.png" alt="Limpa Vidros Magnético">
+                        <p>Limpa Vidros Magnético para Aquários</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/d3mF9KYQ/plantas-aquario.png" alt="Plantas Artificiais">
+                        <p>Plantas Artificiais</p>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.postimg.cc/rp3qVJjT/condicionador-agua.png" alt="Condicionador de Água">
+                        <p>Condicionador de Água</p>
+                    </div>
+                </div>
+                <button class="slider-button prev">&lt;</button>
+                <button class="slider-button next">&gt;</button>
+            </div>
+        </section>
+    </main>
+</div>
+{% endblock %}

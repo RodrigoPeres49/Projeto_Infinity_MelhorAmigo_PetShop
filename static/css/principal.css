@@ -1,0 +1,38 @@
+
+/* CORPO DA PÁGINA */
+
+.melhoramigo{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: scroll;
+}
+
+
+
+/* RODAPÉ DA PÁGINA */
+
+.rodape{
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* ADAPTAÇÃO PARA SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    .rodape{
+        font-size: 10px;
+    }
+}
+
+.rodape h2{
+    font-size: 20px;
+    text-align: center;
+}

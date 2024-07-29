@@ -1,0 +1,56 @@
+{% extends 'melhoramigo/index.html' %}
+
+{% block main %}
+<div class="sobre">
+    <div class="telafundo"></div>
+    <header>
+        <h1>Bem-vindo ao Petshop</h1><h1 style="color: red;">Melhor Amigo!</h1>
+        <p><b>O melhor para o seu pet!</b></p>
+
+        <!-- CONDICIONAL DE ALERTA SE MENSAGEM FOR ENVIADA OU NÃO -->
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <h2>
+                    {% for category, message in messages %}
+                        {% if category == 'success' %}
+                            <div style="color: #24502D" class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% else %}
+                            <div style="color: red" class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </h2>
+            {% endif %}
+        {% endwith %}
+    </header>
+    <main>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+
+        <div class="form-contato">
+            <form action="{{ url_for('email.enviar_mensagem') }}" method="POST" enctype="multipart/form-data">
+                <h1>Envie uma mensagem para nós!</h1>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" placeholder="Digite sua mensagem!" required></textarea>
+                <label for="arquivo">Enviar Arquivo</label>
+                <input type="file" name="arquivo" id="arquivo">
+
+                <!-- DIVISOR PARA ORGANIZAR OS BOTÕES -->
+
+                <div class="buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+{% endblock %}
